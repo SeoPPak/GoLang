@@ -1,0 +1,4 @@
+github.com/otiai10/mint v1.3.2 h1:VYWnrP5fXmz1MXvjuUvcBrXSjGE6xjON+axB/UrpO3E=
+github.com/otiai10/mint v1.3.2/go.mod h1:/yxELlJQ0ufhjUwhshSj+wFjZ78CnZ48/1wtmBH1OTc=
+github.com/otiai10/primes v0.4.0 h1:RATMXrGz6bb8cs37DCDdHxbiJ8Jit3YLOD4wCDTkYEg=
+github.com/otiai10/primes v0.4.0/go.mod h1:UrIZFvOIqbXG0dvYr0EiZ9iMd+RdUSc7qs1+UwuzkBk=
