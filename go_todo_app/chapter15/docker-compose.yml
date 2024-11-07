@@ -1,0 +1,12 @@
+services:
+  app:
+      image: gotodoo
+      build:
+        context: .
+        args:
+          target: dev
+      volumes:
+        - .:/app
+
+      ports:
+        - "18000:80"

@@ -26,7 +26,7 @@ func run(ctx context.Context) error {
 	eg, ctx := errgroup.WithContext(ctx)
 	eg.Go(func() error {
 		if err := s.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			log.Printf("failed to clode: %+v", err)
+			log.Printf("failed to close: %+v", err)
 			return err
 		}
 		return nil
