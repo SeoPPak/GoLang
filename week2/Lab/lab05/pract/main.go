@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	lab "github.com/SeoPPak/GoLang/week2/Lab/lab03/calc"
+	lab "github.com/SeoPPak/GoLang/week2/Lab/lab05/calc"
 )
 
 func main() {
