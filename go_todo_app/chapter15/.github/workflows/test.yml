@@ -1,0 +1,24 @@
+on:
+    push:
+      branches:
+        - "main"
+  
+    pull_request:
+
+name: test
+
+jobs:
+    test:
+      runs-on: ubuntu-ubuntu-latest
+      steps:
+      - uses: actions/setuup-go@v3
+        with:
+          go-version: '>=1.18'
+
+      - uses: actions/checkout@v3
+
+      - run: go test ./... -coverprofile=coverage.coverage.out
+
+      - name: report coverage.coverage.out
+        uses: k1LoW/octocov-action@v0
+    
