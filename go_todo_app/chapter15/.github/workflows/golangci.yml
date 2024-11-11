@@ -4,10 +4,10 @@ on:
       - "**.go"
       - .github/workflows/golangci.yml
 
-  jobs:
-    golangci-lint:
-      name: golangci-lint
-      runs-on: ubuntu-latest
+jobs:
+  golangci-lint:
+    name: golangci-lint
+    runs-on: ubuntu-latest
     steps:
       - name: Check out code into the Go module directory
         uses: actions/checkout@v3
