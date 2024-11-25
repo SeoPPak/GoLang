@@ -18,7 +18,7 @@ type Beginner interface {
 }
 
 type Preparer interface {
-	PreparexContext(ctx context.Context, quert string) (*sqlx.Stmt, error)
+	PreparexContext(ctx context.Context, query string) (*sqlx.Stmt, error)
 }
 
 type Execer interface {

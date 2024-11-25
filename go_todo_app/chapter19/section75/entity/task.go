@@ -7,15 +7,15 @@ type TaskStatus string
 
 const (
 	TaskStatusTodo  TaskStatus = "todo"
-	TaskStatusDoing TaskStatus = "doing"
+	TaskStatusDoing TaskStatus = "done"
 	TastStatusDone  TaskStatus = "done"
 )
 
 type Task struct {
-	ID       TaskID     `json:"id" db: "id"`
-	Title    string     `json:"title" db:"title"`
-	Status   TaskStatus `json:"status" db:"status"`
-	Created  time.Time  `json:"created" db:"created"`
+	ID       TaskID     `json:"id"`
+	Title    string     `json:"title"`
+	Status   TaskStatus `json:"status"`
+	Created  time.Time  `json:"created"`
 	Modified time.Time  `json:"modified" db:"modified"`
 }
 

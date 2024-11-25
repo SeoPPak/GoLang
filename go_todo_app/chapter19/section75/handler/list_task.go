@@ -5,13 +5,10 @@ import (
 
 	"section75/entity"
 	"section75/store"
-
-	"github.com/jmoiron/sqlx"
 )
 
 type ListTask struct {
-	DB   *sqlx.DB
-	Repo *store.Repository
+	Store *store.TaskStore
 }
 
 type task struct {
@@ -22,14 +19,7 @@ type task struct {
 
 func (lt *ListTask) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	ctx := r.Context()
-	tasks, err := lt.Repo.ListTasks(ctx, lt.DB)
-	if err != nil {
-		RespondJSON(ctx, w, &ErrResponse{
-			Message: err.Error(),
-		}, http.StatusInternalServerError)
-		return
-	}
-
+	tasks := lt.Store.All()
 	rsp := []task{}
 
 	for _, t := range tasks {

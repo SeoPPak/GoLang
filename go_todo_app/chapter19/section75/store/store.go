@@ -3,7 +3,7 @@ package store
 import (
 	"errors"
 
-	"github.com/budougumi0617/go_todo_app/entity"
+	"section75/entity"
 )
 
 var (
